@@ -64,7 +64,7 @@
   <!--  서블릿 초기화 파라미터 : 개별 서블릿 내에서만 접근가능 -->
   <init-param>
   <param-name>servlet-name</param-name>
-  <param-value>서블릿 초기화 파라미터</param-value>
+  <param-value>서블릿 초기화 파라미터(개별)</param-value>
   </init-param>
   </servlet>
 

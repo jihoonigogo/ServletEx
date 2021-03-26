@@ -24,6 +24,7 @@ public class EncodingFilter implements Filter {
 			throws IOException, ServletException {
 		//요청의 캐릭터 인코딩은 utf-8로 변환하자
 		req.setCharacterEncoding("UTF-8"); // 변환작업 수행 
+		
 		//뒤쪽에 연결된 필터에 요청과 응답을 전달
 				chain.doFilter(req, resp);
 
