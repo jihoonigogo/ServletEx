@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-
-</head>
-<body>
- <h1>Hello Web World</h1>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!--  다른 페이지의 파일을 포함하기 , 별도의 서블릿이 아닌 함께 컴파일 -->
+<%@ include file="/WEB-INF/views/includes/header.jsp" %>
+       <h1>Hello Web World</h1>
       
        <h3>Static HTML Page</h3>
          
        <h5>와이파이</h5>
+       
+       <!--  jsp 인클루드는 jsp에 포함하여 컴파일 하는 것이 아닌 별도의 서블릿or jsp에 요청 전달 -->
+     <jsp:include page="/WEB-INF/views/includes/nav.jsp" />
+
+       
+       
        
        <p> 이것은 정적 HTML로 작성된 페이지입니다</p>
       <!-- img 태그 : 그림 삽입 -->
@@ -64,6 +66,9 @@
       
       <h3> 웹어플리케이션 모델2 연습(MVC)	</h3>
       <p>
-     			 <a href="el">이메일리스트(MVC)</a>
-</body>
-</html>
+     			 <a href="el">이메일리스트(MVC)</a> </p>
+     			 
+     			 <h3> Cookie test</h3>
+     			 <p>
+		<a href="<%= request.getContextPath() %>/cookies">쿠키 테스트</a>	</p>
+     			 <%@ include file="/WEB-INF/views/includes/footer.jsp" %>

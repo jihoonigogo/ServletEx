@@ -13,7 +13,7 @@ public class UserDaoOrclImpl implements UserDao {
 		Connection conn = null;
 		
 	try {
-		Class.forName("oracle:jdbc.driver.OracleDriver");
+		Class.forName("oracle.jdbc.driver.OracleDriver");
 		String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
 		conn = DriverManager.getConnection(dburl,"C##JIHOONI","1234");
 	}catch(ClassNotFoundException e) {
@@ -30,7 +30,7 @@ public class UserDaoOrclImpl implements UserDao {
 		PreparedStatement pstmt = null;
 		int insertedCount = 0;
 		try {
-			conn=getConnection();
+			conn = getConnection();
 			String sql = "INSERT INTO users " +
 			"(no,name,password,email,gender) "+
 					"VALUES(seq_users_pk.NEXTVAL,?,?,?,?)";
