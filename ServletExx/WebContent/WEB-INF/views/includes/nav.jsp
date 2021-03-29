@@ -3,9 +3,12 @@
     pageEncoding="UTF-8"%>
     
     <%
-    UserVo authUser = (UserVo)session.getAttribute("authUser");%>
+    UserVo authUser = (UserVo)session.getAttribute("authUser");
+    %>
+  
  <ul> 
- 	<% if(authUser == null){ %>
+ 	<% 
+ 	if(authUser == null){ %>
  		<li> <a href="<%= request.getContextPath() %>/users?a=loginform">로그인</a><li>
         <li> <a href="<%= request.getContextPath() %>/users?a=joinform"> 회원가입</a></li>
    <% } else{ %>

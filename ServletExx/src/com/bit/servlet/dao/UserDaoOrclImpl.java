@@ -61,15 +61,15 @@ public class UserDaoOrclImpl implements UserDao {
 		ResultSet rs = null;
 		UserVo vo = null;
 		try {
-			conn=getConnection();
-			String sql = "SELECT no,name,password,email,gender ,created_AtFROM users "+
+			conn= getConnection();
+			String sql = "SELECT no,name,password,email,gender ,created_At FROM users "+
 			"WHERE email = ? AND password = ? ";
 			
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, vo.getEmail());
-			pstmt.setString(2, vo.getPassword());
+			pstmt.setString(1, email); // 내가 직접 입력(set)하는 값임 .
+			pstmt.setString(2, password); // 내가 직접 입력(set)하는 값2임 .
 			
-			rs= pstmt.executeQuery();
+			rs= pstmt.executeQuery(); //
 			//만약에 레코드가 있다 = 그 사용자가 있다 
 			if (rs.next()) {
 				Long no = rs.getLong(1);
