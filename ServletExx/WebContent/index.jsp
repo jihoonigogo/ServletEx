@@ -27,7 +27,7 @@
       <p>
       <h3> GET 전송 연습</h3>
       <a href="hello.jsp?name=Servlet">JSP 호출(GET 방식)</a>
-	</p>
+	
 	<p>
 		<a href="hs?name=Servlet">Servlet 호출(GET 방식)</a>
 	</p>

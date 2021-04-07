@@ -15,7 +15,7 @@ import com.bit.servlet.dao.EmailDaoOrclImpl;
 import com.bit.servlet.dao.EmailVo;
 
 @WebServlet("/el")//현재 클래스를 /el url에 패턴에 반응하는 서블릿으로 등록한다
-//@WebServlet(name="Emaillist", urlpatterns="/el")
+//@WebServlet(name="AddressbookServlet", urlPatterns="/abs")
 // web.xml의 <servlet> , <servlet-mapping>을 등록한 것과 동일 . 편리하다.
 public class EmaillistServlet extends HttpServlet {
 
